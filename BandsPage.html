@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+
+  <!-- Fonts Links (Rubik and Raleway) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,200&family=Rubik:wght@500&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="Bands/bands.css">
+  <link rel="stylesheet" href="Bands/header-aboutme.css">
+
+</head>
+<body>
+
+  <header class="header-aboutme">
+    <p class="titleHeader">Bands</p>
+    <a href="MainPage.html">
+      <span>Home</span><i></i>
+    </a>
+  </header>
+
+  <section class="sec"></section>
+
+  <script>  
+    
+
+    for(let i = 0; i <= 200; i++){
+      let box = document.createElement('div');
+      box.classList.add('box');
+      document.querySelector('.sec').appendChild(box);
+    }
+    function animateBox(){
+      let boxes = document.querySelectorAll('.box');
+      let num = Math.floor(Math.random()*boxes.length);
+      boxes[num].classList.toggle('animate');
+    }
+    setInterval(animateBox, 90);
+  </script>
+</body>
+</html>
